@@ -1,0 +1,26 @@
+@use "../global" as global;
+footer{
+    background-color:global.$base-color;
+    padding-top: 48px;
+    padding-bottom: 40px;
+}
+.p-footer-upper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include global.mq('sp') {
+    flex-direction: column;
+    }
+
+    .c-nav-list{
+        margin-left: auto;
+    }
+}
+
+.p-footer-copyright{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+

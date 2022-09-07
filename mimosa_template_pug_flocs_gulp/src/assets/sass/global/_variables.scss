@@ -1,0 +1,60 @@
+// 色
+$font-color:  // テキストカラー黒
+$main-color: ; //
+$w-color:  // テキストカラー白
+$base-color:  //
+$border-color:  //
+$q-font-color: # //
+$a-font-color:/
+$button-color:#B
+$musk-color:
+
+// フォント
+$ff-base: ; // 日本語標準
+$ff-en:  // 英語フォント
+$ff-message
+
+//フォントサイズPC・JP
+// $fz-cc_large_jp:40px;
+// $fz-cc_small_jp:32px;
+// $fz-sc_jp:32px;
+// $fz-title_jp:32px;
+// $fz-title_sub_jp:24px;
+$fz-base_jp: 16px; // ベースフォントサイズ
+
+
+//フォント設定
+$fw-base: normal;// ベースフォントウェイト
+$lh-base: 2; // ベース行間
+$ls-base: 0.05em; // ベース文字間隔
+
+// レイアウト
+$inner-width: 1040px; // インナー幅サイズ 
+$sp-width: 768px; // スマホサイズ
+
+// ブレークポイント
+$breakpoints: (
+  // スマホ以下の場合
+  "sp": "screen and (max-width: #{$sp-width - 1px})",
+  // タブレット以下の場合
+  "tab": "screen and (max-width: #{$inner-width - 1px})",
+  // タブレット以上の場合
+  "pc": "screen and (min-width: #{$inner-width})"
+);
+
+// 重なり順の定義
+$layer: (
+  // ローディング
+  loading: 300,
+  // モーダル
+  modal: 100,
+  // ドロワー
+  drawer: 40,
+  // フローティング
+  floating: 30,
+  // ヘッダー
+  header: 20,
+  // フッター
+  footer: 10,
+  default: 1
+);

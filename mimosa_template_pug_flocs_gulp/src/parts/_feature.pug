@@ -1,0 +1,33 @@
+-
+    const features = [
+        {
+            url: "./assets/img/img-feature-1.jpg",
+            title: ``,
+            text: ``,
+        },
+        {
+            url: "./assets/img/img-feature-2.jpg",
+            title: ``,
+            text: ``,
+        },
+        {
+            url: "./assets/img/img-feature-3.jpg",
+            title: ``,
+            text: ``,
+        },
+       
+    ];
+section.p-feature
+    .l-inner
+        p.c-catch-copy 
+        .c-section-title
+            h2.c-section-title_main FEATURE
+            p.c-section-title_sub
+        .p-feature-list
+                each feature in features
+                    .c-card-item
+                        .c-card-img
+                             img(src=`${feature.url}`)
+                        .c-card-content
+                                p.c-card-title_line !{feature.title}
+                                p.c-card-text !{feature.text}

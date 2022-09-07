@@ -1,0 +1,24 @@
+@use "../global" as global;
+
+.u-separate {
+	margin-top: 24px;
+	margin-bottom: 24px;
+}
+
+.u-left{
+	text-align: left;
+}
+
+.u-sp-only {
+	// SP時に表示
+		display: none;
+		@include global.mq('sp') {
+		display: block;
+	}
+}
+.u-pc-only {
+	// PC時に表示
+	@include global.mq('sp') {
+		display: none;
+	}
+}

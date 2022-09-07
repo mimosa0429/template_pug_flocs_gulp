@@ -1,0 +1,39 @@
+-
+    const flows = [
+        {
+            url: "./assets/img/img-flow-1.jpg",
+            step: "STEP01",
+            title: ``,
+            text: ``,
+        },
+       
+        {
+            url: "./assets/img/img-flow-2.jpg",
+            step: "STEP01",
+            title: ``,
+            text: ``,
+        },
+       
+        {
+            url: "./assets/img/img-flow-3.jpg",
+            step: "STEP01",
+            title: ``,
+            text: ``,
+        },
+       
+
+    ];
+section.p-flow
+    .l-inner
+        .c-section-title_line
+                    h2.c-section-title_main 
+                    p.c-section-title_sub 
+        .p-flow-list
+                each flow in flows
+                    .c-card-item
+                        .c-card-img
+                             img(src=`${flow.url}`)
+                        .c-card-content
+                                p.c-card-title__maincolor_sm !{flow.step}
+                                p.c-card-text !{flow.title}
+                                p.c-card-text !{flow.text}

@@ -1,0 +1,13 @@
+extend ./templates/_page.pug
+append value
+    - const title= ";
+    - const description= "コーディング練習用のサイト";
+    - const path= "."
+
+block content
+        include ./parts/_header.pug
+        include ./parts/_feature.pug
+        include ./parts/_flow.pug
+        include ./parts/_qa.pug
+        include ./parts/_access.pug
+        include ./parts/_footer.pug

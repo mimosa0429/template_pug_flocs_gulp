@@ -1,0 +1,31 @@
+@use "../global" as global;
+.c-nav-ul{
+    display: flex;
+    @include global.mq('sp') {
+        flex-direction: column;
+}
+}
+
+
+.c-nav-list{
+    &:not(:first-child){
+        margin-left: 32px;
+    }
+    a{
+        display: inline-block;
+        font-size: 15px;
+        padding:1em 0;
+    }
+    
+    @include global.mq('sp') {
+        &:not(:first-child){
+            margin-left: 32px;
+        }
+        a{
+            font-size: 14px;
+            padding:1em 0;
+        }
+
+
+    }
+}

@@ -1,0 +1,39 @@
+@use "../global" as global;
+
+.p-feature{
+    .c-catch-copy{
+        position: relative;
+        margin-bottom: 160px;
+        &:after{
+            content:'';
+            width:56px;
+            height:56px;
+            display: block;
+            border-bottom:1px solid global.$main-color;
+            border-left:1px solid global.$main-color;
+            bottom:-30px;
+            left:50%;
+            transform:rotate(-45deg) translateX(-50%);
+            position: absolute;
+        }   
+    }
+}
+
+.p-feature-list{
+    display: flex;
+    flex-direction: column;
+
+    .c-card-item{
+        margin-bottom: 80px;
+        @include global.mq('sp') {
+            margin-bottom: 40px;
+            .c-card-img{
+                margin-bottom: 20px;
+            }
+            }
+    }
+
+
+}
+
+

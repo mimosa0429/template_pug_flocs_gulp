@@ -1,0 +1,11 @@
+@use "./variables" as global;
+
+// ---
+// メディアクエリー
+// ---
+@mixin mq($breakpoint: sp) {
+	@media #{map-get(global.$breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+

@@ -1,0 +1,28 @@
+@use "../global" as global;
+
+.p-flow{
+    background:global.$base-color;
+}
+
+.p-flow-list{
+    display: flex;
+    flex-direction: row;
+    @include global.mq('sp') {
+        flex-direction: column;
+    }
+    .c-card-item{
+        flex-direction: column;
+        &:not(:first-child){
+        margin-left: 80px;
+        @include global.mq('sp') {
+        margin-left: 0;
+        }
+        }
+        .c-card-img{
+                width: 300px;
+            }
+    }
+}
+
+
+

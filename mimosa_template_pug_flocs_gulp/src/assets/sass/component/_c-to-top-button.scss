@@ -1,0 +1,21 @@
+@use "../global" as global;
+
+.c-to-top-button {
+  border-radius: 50%;
+  color: #fff;
+  display: inline-block;
+  font-size: 20px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  text-decoration: none;
+  width: 60px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+  @include global.mq("sp") {
+    bottom: 92px;
+    right: 16px;
+  }
+}

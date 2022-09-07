@@ -1,0 +1,30 @@
+@use "../global" as global;
+
+body {
+  color: global.$font-color;
+  font-family: global.$ff-en,global.$ff-base;
+  font-size: global.$fz-base_jp;
+  font-weight: global.$fw-base;
+  line-height: global.$lh-base;
+  letter-spacing: global.$ls-base;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  transition:all 0.3s ease;
+  position: relative;
+}
+
+section{
+  padding-top:96px;
+  padding-bottom:96px;
+  @include global.mq('sp') {
+    padding-top:56px;
+    padding-bottom:56px;
+ }
+}

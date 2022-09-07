@@ -1,0 +1,60 @@
+@use "../global" as global;
+
+    /*
+    SP時のみ
+    */ 
+      /* ハンバーガーの箱 */
+    .p-hamburger{
+        width: 28px;
+        height: 21px;
+        cursor: pointer;
+        position: fixed;
+        top: 22px;
+        right: 18px;
+        transition: 0.5s;
+        z-index: 30;
+
+      /* ハンバーガーの３本線 */
+    span {
+        width: 28px;
+        height:1px;
+        background-color: global.$font-color;
+        display: block;
+        position: absolute;
+        top:0;
+        left: 0;
+        transition: 0.5s;
+
+        &:nth-child(1) {
+        top: 0px;
+        }
+        &:nth-child(2) {
+        width:22px;
+        top: 9px;
+        }
+        &:nth-child(3) {
+        width:15px;
+        top: 21px;
+        }
+    }
+}
+
+
+      /* Open時は２本にしてバッテン */
+    .open{
+        &.p-hamburger {
+            &span {
+                &:nth-child(1) {
+                    transform: translateY(10px) rotate(-315deg);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:nth-child(3) {
+                    width:28px;
+                    transform: translateY(-10px) rotate(315deg);
+                }
+            }
+        }
+}
+

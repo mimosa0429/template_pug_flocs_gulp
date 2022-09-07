@@ -1,0 +1,43 @@
+extend ./templates/_page.pug
+append value
+- const title= "コンポーネント";
+    - const description= "コーディング練習用のサイト";
+    - const path= "."
+
+block content
+    .l-inner
+        hr.u-separate
+        p.c-catch-copy
+        hr.u-separate
+        .c-section-title
+            h2.c-section-title_main 
+            p.c-section-title_sub 
+        hr.u-separate
+        .c-section-title_line
+            h2.c-section-title_main 
+            p.c-section-title_sub
+        hr.u-separate
+        button.c-cta-button
+            a 
+        hr.u-separate
+        button.c-cta-button_lg
+            a 
+        .c-card
+            .c-card-img
+                img(src="", alt="")
+            .c-card-map
+                iframe(src="")
+            .c-card-content
+                    p.c-card-title カードのタイトル
+                    p.c-card-title_maincolor メインカラーのタイトル
+                    p.c-card-title__maincolor_sm メインカラーのタイトル(小)
+                    p.c-card-text メニューのタイトル
+                    p.c-card-member コメントした人
+                    p.c-card-address アクセス情報
+        hr.u-separate
+        .c-to-top-button
+            i.fas.fa-chevron-up
+        hr.u-separate
+        include ./_sns-list.pug
+        hr.u-separate
+

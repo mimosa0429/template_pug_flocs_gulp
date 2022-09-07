@@ -1,0 +1,33 @@
+-
+    const menus = [
+        {
+            url: "#profile",
+            //- id: "js-link_profile",
+            name: "PROFILE",
+        },
+        {
+            url: "#feature",
+            //- id: "js-link_feature",
+            name: "Feature",
+        },
+        {
+            url: "#price",
+            //- id: "js-link_price",
+            name: "Price",
+        },
+        {
+            url: "#qa",
+            //- id: "js-link_qa",
+            name: "Q&A",
+        },
+        {
+            url: "#access",
+            //- id: "js-link_access",
+            name: "Access",
+        },
+    ];
+nav.c-nav
+    ul.c-nav-ul
+        each menu in menus
+            li.c-nav-list: a(href=`${menu.url}`) #{menu.name}
+            //- //id=`${menu.id}`は設定しない

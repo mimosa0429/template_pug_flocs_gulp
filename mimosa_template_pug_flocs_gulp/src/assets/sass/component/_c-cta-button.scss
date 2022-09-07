@@ -1,0 +1,58 @@
+@use "../global" as global;
+
+.c-cta-button{
+    margin:0 auto;
+    width:170px;
+    border-radius: 2px;
+    background: linear-gradient(258.82deg, global.$main-color 21.4%, global.$button-color 58.78%, global.$main-color 96.8%);
+    a{
+        display: block;
+        padding:18px 40px;
+        color:global.$w-color;
+        letter-spacing: 0.02em;
+    }
+        &::hover{
+            opacity: 0.7;
+        }
+    
+
+    @include global.mq('sp') {
+        width:134px;
+        a{
+        font-size: 14px;
+        padding:12px 28px;
+        }
+    }
+}
+    .c-cta-button_lg{
+        @extend .c-cta-button;
+        width:600px;
+        position: relative;
+        a{
+            display: block;
+            padding:27px 40px;
+            color:global.$w-color;
+            letter-spacing: 0.02em;
+         }
+
+        &:after{
+            content:'';
+            position: absolute;
+            display:inline-block;
+            width:1em;
+            height:1em;
+            border-right:1px solid global.$w-color;
+            border-bottom:1px solid global.$w-color;
+            transform: rotate(-45deg);
+            right:20px;
+            padding-top: 2px;
+        }
+
+        @include global.mq('sp') {
+            width:295px;
+            a{
+            font-size: 16px;
+            padding:20px 28px;
+            }
+        }
+    }

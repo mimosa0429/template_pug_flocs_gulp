@@ -1,0 +1,59 @@
+@use "../global" as global;
+
+.p-qa{
+   
+}
+
+.p-qa-list{
+    max-width:880px;
+    margin:0 auto;
+    @include global.mq('sp') {
+    width:100%;
+    }
+}
+
+.p-qa-item{
+    border-bottom: 1px solid global.$border-color;
+    &:not(:first-child){
+        margin-top: 40px;
+    }
+    
+ }
+
+.p-q-text{
+        display: flex;
+        margin-bottom: 36px;
+        position: relative;
+        color:global.$q-font-color;
+        &:before{
+            content:"Q";
+            display: inline-block;
+            font-size: 20px;
+            margin-top: -4px;
+            margin-right: 15px;
+            color:global.$main-color;
+        }
+        @include global.mq('sp') {
+            margin-bottom: 16px;
+        }
+    }
+.p-a-text{
+        @extend .p-q-text;
+        overflow: Y;
+        letter-spacing: 0.02em;
+        margin-bottom: 40px;
+        color:global.$a-font-color;
+        &:before{
+            content:"A";
+            color:global.$font-color;
+        }
+        @include global.mq('sp') {
+        
+        }
+ }
+
+
+
+
+
+

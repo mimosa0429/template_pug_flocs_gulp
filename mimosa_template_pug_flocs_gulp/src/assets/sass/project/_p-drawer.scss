@@ -1,0 +1,53 @@
+@use "../global" as global;
+
+.p-drawer{
+    //   ドロワーメニューのスタイル
+    width: 70%;
+    background: global.$w-color;
+    padding-top: 80px;
+    padding-left: 64px;
+    position: fixed;
+    top: 0px;
+    right: -500px;//サイドに隠しておいてOpen時に0に戻す
+    bottom: 0;
+    opacity: 0;//透明にしておいてOpen時に1に戻す
+    overflow-y: auto;
+    transition: 0.5s;
+    z-index: 30;
+    // .c-nav{
+    // @include global.mq('sp') {
+    // flex-direction: column;
+    // text-align: left;
+   // }
+}
+.open {
+    // Open時に位置を０に戻してOpacityも１に戻し表示させる
+    &.p-drawer{
+        right: 0;
+        opacity: 1;
+    }
+}
+
+/* Navの下のマスク*/
+/* 通常は表示しない*/
+.p-mask {
+    display: none;
+    transition: 0.5s;
+}
+/* Open時に表示*/
+.open {
+    &.p-mask {
+    width: 100%;
+    height: 100%;
+    background-color: global.$musk-color;
+    cursor: pointer;
+    display: block;
+    opacity: 0.7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    }
+}
+
+

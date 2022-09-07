@@ -1,0 +1,20 @@
+@use "../global" as global;
+
+.c-sns-list{
+    display: flex;
+
+    li{
+        &:not(:first-child){
+            margin-left: 25px;
+            border: 1px solid #000;
+        }
+    }
+
+    a{
+        display: block;
+        transition:all 0.3s ease;
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+}

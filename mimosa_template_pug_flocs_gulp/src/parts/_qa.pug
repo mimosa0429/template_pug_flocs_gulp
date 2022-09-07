@@ -1,0 +1,30 @@
+-
+    const qas = [
+        {
+            q_text:"",
+            a_text:"",
+        },
+        {
+            q_text:"",
+            a_text:"",
+        },
+        {
+            q_text:"",
+            a_text:"",
+        },
+        {
+            q_text:"",
+            a_text:"",
+        },
+    ];
+section.p-qa
+    .l-inner
+        .c-section-title
+            h2.c-section-title_main Q&A
+            p.c-section-title_sub よくあるご質問
+        .p-qa-list
+            each qa in qas
+                .p-qa-item
+                    .p-q-text #{qa.q_text}
+                    .p-a-text !{qa.a_text}
+                

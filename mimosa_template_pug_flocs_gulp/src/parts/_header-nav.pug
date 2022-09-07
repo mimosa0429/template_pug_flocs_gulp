@@ -1,0 +1,28 @@
+-
+    const h_menus = [
+        {
+            url: "#profile",
+            name: "PROFILE",
+        },
+        {
+            url: "#feature",
+            name: "Feature",
+        },
+        {
+            url: "#price",
+            name: "Price",
+        },
+        {
+            url: "#qa",
+            name: "Q&A",
+        },
+        {
+            url: "#access",
+            name: "Access",
+        },
+    ];
+nav.c-nav.u-sp-only
+    ul.c-nav-ul
+        each h_menu in h_menus
+            li.c-nav-list: a(href=`${h_menu.url}`) #{h_menu.name}
+            

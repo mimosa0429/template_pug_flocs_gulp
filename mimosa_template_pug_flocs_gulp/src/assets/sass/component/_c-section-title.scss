@@ -1,0 +1,53 @@
+@use "../global" as global;
+
+.c-section-title{
+  text-align: center;
+  margin-bottom: 80px;
+
+    @include global.mq('sp') {
+    margin-bottom: 40px;
+    }
+  
+}
+.c-section-title_main {
+  font-size: 56px;
+  letter-spacing: 0.08em;
+  margin-bottom: 40px;
+
+
+    @include global.mq('sp') {
+    font-size: 28px;
+    margin-bottom: 0;
+    }
+}
+
+.c-section-title_sub {
+
+  @include global.mq('sp') {
+    font-size: 14px;
+}
+}
+
+.c-section-title_line{
+  @extend .c-section-title;
+  text-align:left;
+    .c-section-title_main{
+      position: relative;
+      margin-right: 32px;
+      &:after{
+        content:"";
+        position: absolute;
+        width:340px;
+        height: 0.6px;
+        display:inline-block;
+        background: global.$font-color;
+        top:50%;
+        right:-50%;
+          @include global.mq('sp') {
+          &:after{
+            display: none;
+          }
+        }
+      }
+    }
+  }

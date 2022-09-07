@@ -1,0 +1,34 @@
+-
+    const abouts = [
+        {
+            url: "./assets/img/img-about-1.png",
+            title: ``,
+            text: "",
+        },
+        {
+            url: "./assets/img/img-about-1.png",
+            title: ``,
+            text: "",
+        },
+        {
+            url: "./assets/img/img-about-1.png",
+            title: ``,
+            text: "",
+        },
+    ];
+.p-about
+    .l-inner_about
+        .c-section-title
+            p.c-section-title_sub 
+            h2.c-section-title__main 
+            .p-about-list.l-about-list
+                each about in abouts
+                    .p-about-item.l-about-item
+                        .about-img
+                            img(src=`${about.url}`)
+                        .about-text
+                            p.c-text-title.l-text-title !{about.title}
+                            p !{about.text}
+
+
+
